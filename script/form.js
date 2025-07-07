@@ -35,6 +35,12 @@ formElement.addEventListener("submit", function (e) {
   petList.push(nuovoPet);
   mostraPet(nuovoPet);
   formElement.reset();
+
+  if (petList.length >= 2) {
+    console.log(
+      petList[petList.length - 2].sameOwner(petList[petList.length - 1])
+    );
+  }
 });
 
 function mostraPet(pet) {
@@ -42,3 +48,5 @@ function mostraPet(pet) {
   li.textContent = `${pet.petName} (${pet.species}, ${pet.breed}) - Padrone: ${pet.ownerName}`;
   petListElement.appendChild(li);
 }
+
+console.log(petList[0].sameOwner(petList[1]));
