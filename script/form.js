@@ -48,5 +48,3 @@ function mostraPet(pet) {
   li.textContent = `${pet.petName} (${pet.species}, ${pet.breed}) - Padrone: ${pet.ownerName}`;
   petListElement.appendChild(li);
 }
-
-console.log(petList[0].sameOwner(petList[1]));
